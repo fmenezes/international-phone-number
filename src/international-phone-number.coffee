@@ -68,9 +68,7 @@ angular.module("internationalPhoneNumber", []).directive 'internationalPhoneNumb
       if !value
         return value
       else
-        $timeout () ->
-          element.intlTelInput 'setNumber', value
-        , 0
+        element.intlTelInput 'setNumber', value
         return element.val()
 
     ctrl.$parsers.push (value) ->
